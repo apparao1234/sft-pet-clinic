@@ -4,12 +4,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>2.1.0.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>guru.springframework</groupId>
 	<artifactId>sfg-pet-clinic</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>sfg-pet-clinic</name>
 	<packaging>pom</packaging>
 	<description>Demo project for Spring Boot</description>
@@ -40,7 +40,8 @@
 	 <scm><developerConnection>
 	 scm:git:https://github.com/apparao1234/sft-pet-clinic
 	 </developerConnection>
-	 </scm>
+	   <tag>sfg-pet-clinic-0.0.1</tag>
+  </scm>
 
   <modules>
     <module>pet-clinic-data</module>
