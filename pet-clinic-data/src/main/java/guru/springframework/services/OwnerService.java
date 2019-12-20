@@ -1,12 +1,8 @@
 package guru.springframework.services;
 
-import java.util.Set;
-
 import guru.springframework.model.Owner;
 
-public interface OwnerService {
-	Owner findById(Long id);
+public interface OwnerService extends CrudService<Owner,Long> {	
 	Owner findBylastname(String name);
-	Owner save(Owner owner);
-	Set<Owner> findAll();
+
 }
