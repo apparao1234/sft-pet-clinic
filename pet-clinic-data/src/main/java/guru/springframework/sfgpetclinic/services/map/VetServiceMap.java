@@ -22,7 +22,7 @@ public class VetServiceMap  extends AbstractmapService<Vet,Long> implements VetS
 	
 	public Vet save( Vet object)
             {
-		return super.save(object.getId(), object)  ;      }
+		return super.save(object)  ;      }
 	
 	public void deleteById(Long id){
 		 super.deleteById(id);
