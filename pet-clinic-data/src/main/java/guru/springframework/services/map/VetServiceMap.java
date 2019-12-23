@@ -4,9 +4,9 @@ package guru.springframework.services.map;
 import java.util.Set;
 
 import guru.springframework.model.Vet;
-import guru.springframework.services.CrudService;
+import guru.springframework.services.VetService;
 
- public class VetServiceMap  extends AbstractmapService<Vet,Long> implements CrudService<Vet,Long> {
+ public class VetServiceMap  extends AbstractmapService<Vet,Long> implements VetService {
 	
 	public Set<Vet> findAll(){
 		
