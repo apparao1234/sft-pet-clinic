@@ -1,9 +1,12 @@
-package guru.springframework.services.map;
+package guru.springframework.sfgpetclinic.services.map;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+
+import org.springframework.stereotype.Service;
+
 
 public abstract class AbstractmapService<T,ID> {
 	

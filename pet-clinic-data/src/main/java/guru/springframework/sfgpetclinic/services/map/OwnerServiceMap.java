@@ -1,10 +1,13 @@
-package guru.springframework.services.map;
+package guru.springframework.sfgpetclinic.services.map;
 
 import java.util.Set;
 
-import guru.springframework.model.Owner;
-import guru.springframework.services.OwnerService;
+import org.springframework.stereotype.Service;
 
+import guru.springframework.sfgpetclinic.model.Owner;
+import guru.springframework.sfgpetclinic.services.OwnerService;
+
+@Service
 public class OwnerServiceMap extends AbstractmapService<Owner,Long> implements OwnerService {
 	
 	public Set<Owner> findAll(){
