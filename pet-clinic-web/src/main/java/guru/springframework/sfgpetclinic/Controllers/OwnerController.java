@@ -22,7 +22,14 @@ private final OwnerService ownerService;
         model.addAttribute("owners" , ownerService.findAll());
         return "owners/index";
     }
- 
+	
+	
+	@RequestMapping("/find")
+    public String findOnwer() {
+      
+        return "not Implemented";
+    }
+	
 }
 	
 
