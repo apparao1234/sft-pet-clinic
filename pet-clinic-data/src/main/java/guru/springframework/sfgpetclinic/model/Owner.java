@@ -9,6 +9,30 @@ public class Owner extends Person{
 	private String  city ;
 	private String  telephone;
 	
+	public String getAdress() {
+		return adress;
+	}
+
+	public void setAdress(String adress) {
+		this.adress = adress;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
 	private Set<Pet> pets;
 
 	public Set<Pet> getPets() {
