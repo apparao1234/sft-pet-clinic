@@ -23,7 +23,7 @@ private final VetService vetService;
 //	}
 	
 	
-    @RequestMapping({"/vet","/vets/index","/vets/index.html","/vets.html"})
+    @RequestMapping({"","/","/vets","/vets/index","/vets/index.html","/vets.html"})
     public String listVets(Model model) {
         model.addAttribute("vets" , vetService.findAll());
         return "vets/index";
