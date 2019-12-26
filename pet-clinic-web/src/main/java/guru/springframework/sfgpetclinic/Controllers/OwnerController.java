@@ -25,9 +25,9 @@ private final OwnerService ownerService;
 	
 	
 	@RequestMapping("/find")
-    public String findOnwer() {
+    public String findOnwers() {
       
-        return "not Implemented";
+        return "notimplemented";
     }
 	
 }
