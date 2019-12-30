@@ -3,12 +3,24 @@ package guru.springframework.sfgpetclinic.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="owners")
 public class Owner extends Person{
 	
+	@Column(name="adress")
 	private String  adress;
+	@Column(name="city")
 	private String  city ;
+	@Column(name="telephone")
 	private String  telephone;
+	@OneToMany(cascade=CascadeType.ALL,mappedBy="owners")
+	private Set<Pet> pets = new HashSet<>();
 	
 	public String getAdress() {
 		return adress;
@@ -34,7 +46,7 @@ public class Owner extends Person{
 		this.telephone = telephone;
 	}
 
-	private Set<Pet> pets = new HashSet<>();
+	
 
 	public Set<Pet> getPets() {
 		return pets;
