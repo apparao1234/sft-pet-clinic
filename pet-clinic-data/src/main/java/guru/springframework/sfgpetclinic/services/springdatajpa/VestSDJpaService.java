@@ -14,9 +14,7 @@ import guru.springframework.sfgpetclinic.services.VetService;
 @Profile("springdatajpa")
 public class VestSDJpaService implements VetService{
 	private VetRepository vetRepository;
-
-	public VestSDJpaService(VetRepository vetRepository) {
-	
+	public VestSDJpaService(VetRepository vetRepository) {	
 		this.vetRepository  = vetRepository;
 	}
 	
