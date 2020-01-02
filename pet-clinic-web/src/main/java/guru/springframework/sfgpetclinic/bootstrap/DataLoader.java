@@ -10,10 +10,12 @@ import guru.springframework.sfgpetclinic.model.Pet;
 import guru.springframework.sfgpetclinic.model.PetType;
 import guru.springframework.sfgpetclinic.model.Speciality;
 import guru.springframework.sfgpetclinic.model.Vet;
+import guru.springframework.sfgpetclinic.model.Visit;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.sfgpetclinic.services.PetTypeService;
 import guru.springframework.sfgpetclinic.services.SpecialitiesService;
 import guru.springframework.sfgpetclinic.services.VetService;
+import guru.springframework.sfgpetclinic.services.VisitService;
 
 
 @Component
@@ -23,8 +25,10 @@ public class DataLoader implements CommandLineRunner {
 	private final VetService vetService;
 	private final PetTypeService petTypeService;
 	private final SpecialitiesService  specialitiesService;
+	private final  VisitService visitService;
 	
-	public DataLoader(OwnerService ownerService,VetService vetService,PetTypeService petTypeService,SpecialitiesService  specialitiesService){
+	
+	public DataLoader(OwnerService ownerService,VetService vetService,PetTypeService petTypeService,SpecialitiesService  specialitiesService, VisitService visitService){
 	//	ownerService = new OwnerServiceMap() ;
 		// vetService = new VetServiceMap();
 		
@@ -32,6 +36,7 @@ public class DataLoader implements CommandLineRunner {
 		this.ownerService = ownerService;
 		this.petTypeService=petTypeService;
 		this.specialitiesService = specialitiesService;
+		this.visitService = visitService;
 	}
 	
 	
@@ -91,6 +96,12 @@ public class DataLoader implements CommandLineRunner {
 		owner2.setCity("Bengalore2");
 		owner2.setTelephone("788888");
 		ownerService.save(owner2);
+		
+		Visit carVisit = new Visit();
+		carVisit.setPet(mikespet);
+		carVisit.setDate(LocalDate.now());
+		carVisit.setDescription("Sneezy kitty");
+		visitService.save(carVisit);
 		
 		Pet mikespet1 = new Pet();
 		mikespet1.setPetType(savedCat);
